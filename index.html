@@ -44,17 +44,22 @@
 
       var toggle = document.getElementsById('toggleButton');
       var overallBody = document.getElementsById("overallBody")
-
+/*
       var clickCount = 0;
 
       function clickedButton(){
         clickCount = clickCount + 1;
         alert("I've been clicked" + clickCount);
       }
+*/
 
     function changeColorMode() {
-      overallBody.classList.add("darkMode");
+      if (toggle.classList.contains("darkMode") === false) {
+        overallBody.classList.remove("darkMode");
+        toggle.innerText = "Switch to Dark Mode"
+      }
     }
+
     toggle.onclick = changeColorMode;
 
     </script>
